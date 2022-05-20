@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    .guide{
+        @apply border-white border-2;
+      }
+  
+    .guide2{
+        @apply border-black border-2;
+      }
+  }
+
+*{
+    /* border: solid 2px #fff; */
+}
+
+#checkbox:checked+label .switch-ball {
+    background-color: white;
+    transform: translateX(24px);
+    transition: transform 0.3s linear;
+}
+
+.spin {
+    background-image: url("/images/DemolinoWhite.svg");
+}
+
+.demolino:hover .spin {
+    background-image: url("/images/demolinoStock.svg");
+    -webkit-animation-name: spin;
+    animation-name: spin;
+    -webkit-animation-duration: 1000ms;
+    animation-duration: 1000ms;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* #Mega Menu Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.mega-menu {
+    display: none;
+    text-align: left;
+
+}
+
+
+
+/* #hoverable Class Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.hoverable {
+    position: static;
+}
+
+.hoverable>a:after {
+    content: "\25BC";
+    font-size: 10px;
+    padding-left: 6px;
+    position: relative;
+    top: -1px;
+}
+
+.hoverable:hover .mega-menu {
+    display: block;
+    position: fixed;
+    top: 0;
+}
+
+.h_list:after {
+    display: flex;
+    padding-bottom: 2px;
+    content: '';
+    border-bottom: solid 2px rgb(226 232 240 / var(--tw-text-opacity));
+    ;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+}
+
+.h_list:hover:after {
+    transform: scaleX(1);
+}
+
+.h_list.fromRight:after {
+    transform-origin: 100% 50%;
+}
+
+/* .h_list.fromLeft:after {
+    transform-origin: 0% 50%;
+} */
