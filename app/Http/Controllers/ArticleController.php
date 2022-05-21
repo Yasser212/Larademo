@@ -31,12 +31,9 @@ class ArticleController extends Controller
     public function store(Request $request) {
         $formFields = $request->validate([
             'title' => 'required',
-            'company' => ['required', Rule::unique('articles', 'company')],
-            'location' => 'required',
-            'website' => 'required',
-            'email' => ['required', 'email'],
+            'author' => 'required',
             'tags' => 'required',
-            'description' => 'required'
+            'content' => 'required'
         ]);
 
         if($request->hasFile('logo')) {
@@ -64,12 +61,9 @@ class ArticleController extends Controller
         
         $formFields = $request->validate([
             'title' => 'required',
-            'company' => ['required'],
-            'location' => 'required',
-            'website' => 'required',
-            'email' => ['required', 'email'],
+            'author' => 'required',
             'tags' => 'required',
-            'description' => 'required'
+            'content' => 'required'
         ]);
 
         if($request->hasFile('logo')) {

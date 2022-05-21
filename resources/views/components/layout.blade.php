@@ -134,6 +134,7 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                                             <span class="badge">New</span>
                                         </a>
                                     </li>
+                                    <li><a>Favorite</a></li>
                                     <li><a>Settings</a></li>
                                     <li><a>Logout</a></li>
                                 </ul>
@@ -194,6 +195,7 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                                     <span class="badge">New</span>
                                 </a>
                             </li>
+                            <li><a>Favorite</a></li>
                             <li><a>Settings</a></li>
                             <li><a>Logout</a></li>
                         </ul>
@@ -216,10 +218,10 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
 
             <div class="p-5 mx-auto flex flex-col md:space-y-8 space-y-4 justify-between text-white">
                 <form
-                    class="w-full md:w-fit sm:hidden flex md:flex-row flex-col md:space-y-0 space-y-4 md:flex-nowrap flex-wrap items-center justify-center md:space-x-3 my-2 grow">
+                    class="w-full sm:hidden flex md:flex-row flex-col md:space-y-0 space-y-4 md:flex-nowrap flex-wrap items-center justify-center md:space-x-3 my-2 grow">
                     <div class="flex  bg-white w-full rounded-full p-1">
                         <input type="text"
-                            class="text-black w-full px-2 md:px-4 rounded-full h-10 md:w-96 focus:outline-none placeholder:text-xs md:placeholder:text-base"
+                            class="text-black w-full px-2 md:px-4 rounded-full h-10 md:w-96 focus:outline-none placeholder:text-sm md:placeholder:text-base my-auto mb-1"
                             placeholder="Get new articles delivered to your inbox!" />
                         <button
                             class="px-6 py-2 w-fit text-white rounded-full bg-brightRed hover:bg-brightRedLight focus:outline-none">
@@ -253,7 +255,7 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                         class="w-full md:w-fit hidden sm:flex md:flex-row flex-col md:space-y-0 space-y-4 md:flex-nowrap flex-wrap items-center justify-center md:space-x-3 my-2 order-2">
                         <div class="flex  bg-white w-full rounded-full p-1">
                             <input type="text"
-                                class="text-black w-full px-2 md:px-4 rounded-full h-10 md:w-96 focus:outline-none placeholder:text-xs md:placeholder:text-base"
+                                class="text-black w-full px-2 md:px-4 rounded-full h-10 md:w-96 focus:outline-none placeholder:text-xs md:placeholder:text-base my-auto"
                                 placeholder="Get new articles delivered to your inbox!" />
                             <button
                                 class="px-6 py-2 w-fit text-white btn btn-error rounded-full bg-gradient-to-br from-brightRedLight to-brightRed shadow-inner">

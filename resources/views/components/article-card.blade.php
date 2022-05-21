@@ -1,7 +1,9 @@
 @props(['article'])
 
 
-<x-card>
+<div onMouseOver="this.style.transform='scale(1.01)'" onMouseOut="this.style.transform='scale(1)'"
+    class="dark:bg-slate-800 dark:text-slate-100 text-slate-800 bg-white flex flex-wrap h-full md:flex-col md:flex-nowrap justify-start my-auto transform transition duration-200">
+
     <a href="/articles/{{ $article->id }}"><img class="mx-auto lg:w-fit" src="{{ asset('posts_img/img(1).jpg') }}"
             alt="Article Image"></a>
     <div class="flex flex-col py-5 px-4 sm:px-6 md:justify-between ">
@@ -57,4 +59,4 @@
         <x-article-tags :tagsCsv="$article->tags" />
     </div>
 
-</x-card>
+</div>

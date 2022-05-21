@@ -1,4 +1,6 @@
-<div onMouseOver="this.style.transform='scale(1.01)'" onMouseOut="this.style.transform='scale(1)'"
-    class="dark:bg-slate-800 dark:text-slate-100 text-slate-800 bg-white flex flex-wrap h-full md:flex-col md:flex-nowrap justify-start my-auto transform transition duration-200">
+<div
+    class="bg-gray-50 border border-gray-200 p-10 rounded max-w-lg mx-auto mt-24 dark:bg-slate-800 text-slate-800 dark:text-slate-200 mb-24">
+
+
     {{ $slot }}
 </div>

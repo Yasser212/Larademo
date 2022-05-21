@@ -3,13 +3,15 @@
     x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100"
     x-transition:leave-end="transform opacity-0 scale-95"
     class="flex md:flex-row mx-auto justify-between md:w-9/12 w-full px-4 pt-2 pb-4">
-    <form dir="rtl" class="flex flex-row w-full rounded-md shadow">
-        <input type="search"
+
+
+    <form action="/" dir="rtl" class="flex flex-row w-full rounded-md shadow">
+        <input type="text" name="search"
             class="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
             placeholder="إبحث في الموقع..." aria-label="Search" aria-describedby="button-addon2">
         <button
             class="btn px-6 py-2.5 mr-2 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700  focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out flex items-center"
-            type="button" id="button-addon2">
+            type="submit" id="button-addon2">
             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="w-4"
                 role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                 <path fill="currentColor"
