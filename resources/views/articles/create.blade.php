@@ -10,8 +10,8 @@
 
             <div class="mb-6">
                 <label for="title" class="inline-block text-lg mb-2">Article Title</label>
-                <input type="text" class="border border-gray-200 rounded p-2 w-full" name="title"
-                    placeholder="Example: Senior Laravel Developer" value="{{ old('title') }}" />
+                <input type="text" class="border border-gray-200 rounded p-2 w-full text-slate-600" name="title"
+                    placeholder="Your Article here..." value="{{ old('title') }}" />
 
                 @error('title')
                     <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
@@ -20,8 +20,8 @@
 
             <div class="mb-6">
                 <label for="author" class="inline-block text-lg mb-2"><A>Article Author</A></label>
-                <input type="text" class="border border-gray-200 rounded p-2 w-full" name="author"
-                    placeholder="Example: Remote, Boston MA, etc" value="{{ old('author') }}" />
+                <input type="text" class="border border-gray-200 rounded p-2 w-full text-slate-600" name="author"
+                    placeholder="Your Name..." value="{{ old('author') }}" />
 
                 @error('author')
                     <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
@@ -32,8 +32,8 @@
                 <label for="tags" class="inline-block text-lg mb-2">
                     Tags (Comma Separated)
                 </label>
-                <input type="text" class="border border-gray-200 rounded p-2 w-full" name="tags"
-                    placeholder="Example: Laravel, Backend, Postgres, etc" value="{{ old('tags') }}" />
+                <input type="text" class="border border-gray-200 rounded p-2 w-full text-slate-600" name="tags"
+                    placeholder="Example: Politic, Sport, Art, Lifestyle, ... ,etc" value="{{ old('tags') }}" />
 
                 @error('tags')
                     <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
@@ -55,8 +55,8 @@
                 <label for="content" class="inline-block text-lg mb-2">
                     Content
                 </label>
-                <textarea class="border border-gray-200 rounded p-2 w-full" name="content" rows="10"
-                    placeholder="Include tasks, requirements, salary, etc">{{ old('content') }}</textarea>
+                <textarea class="border border-gray-200 rounded p-2 w-full text-slate-600" name="content" rows="10"
+                    placeholder="Content of your Article here...">{{ old('content') }}</textarea>
 
                 @error('content')
                     <p class="text-red-500 text-xs mt-1">{{ $message }}</p>

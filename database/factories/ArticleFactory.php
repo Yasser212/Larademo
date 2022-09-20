@@ -20,9 +20,8 @@ class ArticleFactory extends Factory
         return [
             'title' => $this->faker->sentence(),
             'tags' => 'Sport,Football,PSG,Mbappe',
-            'content' => $this->faker->paragraph(20),
+            'content' => $this->faker->paragraph(40),
             'author' => $this->faker->name(),
-            'date' => $this->faker->date(),
         ];
     }
 

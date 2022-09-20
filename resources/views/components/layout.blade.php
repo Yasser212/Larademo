@@ -30,7 +30,6 @@
         -webkit-animation-timing-function: ease-in-out;
         animation-timing-function: ease-in-out;
     }
-
 </style>
 
 <body x-cloak :class="{ 'dark': darkMode === true }" x-data="{ 'darkMode': false }" x-init="darkMode = JSON.parse(localStorage.getItem('darkMode'));
@@ -123,7 +122,7 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                             <div class="dropdown dropdown-end md:hidden mr-1 mt-1">
                                 <label tabindex="0" class="btn btn-ghost btn-circle avatar">
                                     <div class="w-10 rounded-full">
-                                        <img src="{{ asset('/images/user.svg') }}" />
+                                        <img src="https://api.lorem.space/image/face?hash=33791" />
                                     </div>
                                 </label>
                                 <ul tabindex="0"
@@ -134,7 +133,6 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                                             <span class="badge">New</span>
                                         </a>
                                     </li>
-                                    <li><a>Favorite</a></li>
                                     <li><a>Settings</a></li>
                                     <li><a>Logout</a></li>
                                 </ul>
@@ -147,7 +145,7 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                             class="flex-col-reverse flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
                             <div x-on:click.away="open = false" class="relative" x-data="{ open: false }">
                                 <button x-on:click="open = !open" class="btn btn-ghost w-full items-center">
-                                    <span class="text-base">المزيد</span>
+                                    <span class="text-base">more</span>
                                     <svg fill="currentColor" viewBox="0 0 20 20"
                                         :class="{ 'rotate-180': open, 'rotate-0': !open }"
                                         class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform">
@@ -165,19 +163,19 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                                     class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48 z-30">
                                     <div
                                         class="mt-1 p-2 shadow menu menu-compact dropdown-content bg-darkBlue dark:bg-black border-slate-400 border-2 rounded-box w-full md:w-52">
-                                        <a class="btn btn-ghost" href="#">صحة</a>
-                                        <a class="btn btn-ghost" href="#">أسلوب حياة</a>
-                                        <a class="btn btn-ghost" href="#">موسيقى</a>
-                                        <a class="btn btn-ghost" href="#">فن</a>
-                                        <a class="btn btn-ghost" href="#">منوعات</a>
-                                        <a class="btn btn-ghost" href="#">ترجمة</a>
-                                        <a class="btn btn-ghost" href="#">تكنولوجيا</a>
+                                        <a class="btn btn-ghost" href="#">Sports</a>
+                                        <a class="btn btn-ghost" href="#">Tech</a>
+                                        <a class="btn btn-ghost" href="#">Culture</a>
+                                        <a class="btn btn-ghost" href="#">Art</a>
+                                        <a class="btn btn-ghost" href="#">Music</a>
+                                        <a class="btn btn-ghost" href="#">World</a>
+                                        <a class="btn btn-ghost" href="#">Environment</a>
                                     </div>
                                 </div>
                             </div>
-                            <a class="btn btn-ghost text-base" href="#">رياضة</a>
-                            <a class="btn btn-ghost text-base" href="#">اقتصاد</a>
-                            <a class="btn btn-ghost text-base" href="#">سياسة</a>
+                            <a class="btn btn-ghost text-base" href="#">Science</a>
+                            <a class="btn btn-ghost text-base" href="#">Business</a>
+                            <a class="btn btn-ghost text-base" href="#">Politic</a>
                         </div>
                     </nav>
                     <!-- Profile -->
@@ -195,7 +193,6 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                                     <span class="badge">New</span>
                                 </a>
                             </li>
-                            <li><a>Favorite</a></li>
                             <li><a>Settings</a></li>
                             <li><a>Logout</a></li>
                         </ul>
@@ -210,6 +207,9 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
 
         <main>
             {{ $slot }}
+            {{-- <div class="w-full h-screen flex guide">
+                <div></div>
+            </div> --}}
         </main>
 
 
@@ -268,10 +268,10 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                     <div class="flex justify-between items-center sm:space-x-4 xs:space-x-10 sm:min-w-fit sm:order-3">
                         <!-- Facebook Link -->
                         <a href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48"
-                                viewBox="0 0 48 48" style=" fill:#000000;">
-                                <linearGradient id="Ld6sqrtcxMyckEl6xeDdMa_uLWV5A9vXIPu_gr1" x1="9.993" x2="40.615"
-                                    y1="9.993" y2="40.615" gradientUnits="userSpaceOnUse">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48"
+                                height="48" viewBox="0 0 48 48" style=" fill:#000000;">
+                                <linearGradient id="Ld6sqrtcxMyckEl6xeDdMa_uLWV5A9vXIPu_gr1" x1="9.993"
+                                    x2="40.615" y1="9.993" y2="40.615" gradientUnits="userSpaceOnUse">
                                     <stop offset="0" stop-color="#2aa4f4"></stop>
                                     <stop offset="1" stop-color="#007ad9"></stop>
                                 </linearGradient>
@@ -285,10 +285,10 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                         </a>
                         <!-- Youtube Link -->
                         <a href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48"
-                                viewBox="0 0 48 48" style=" fill:#000000;">
-                                <linearGradient id="PgB_UHa29h0TpFV_moJI9a_9a46bTk3awwI_gr1" x1="9.816" x2="41.246"
-                                    y1="9.871" y2="41.301" gradientUnits="userSpaceOnUse">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48"
+                                height="48" viewBox="0 0 48 48" style=" fill:#000000;">
+                                <linearGradient id="PgB_UHa29h0TpFV_moJI9a_9a46bTk3awwI_gr1" x1="9.816"
+                                    x2="41.246" y1="9.871" y2="41.301" gradientUnits="userSpaceOnUse">
                                     <stop offset="0" stop-color="#f44f5a"></stop>
                                     <stop offset=".443" stop-color="#ee3d4a"></stop>
                                     <stop offset="1" stop-color="#e52030"></stop>
@@ -309,10 +309,10 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                         </a>
                         <!-- Twitter Link -->
                         <a href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48"
-                                viewBox="0 0 48 48" style=" fill:#000000;">
-                                <linearGradient id="_osn9zIN2f6RhTsY8WhY4a_5MQ0gPAYYx7a_gr1" x1="10.341" x2="40.798"
-                                    y1="8.312" y2="38.769" gradientUnits="userSpaceOnUse">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48"
+                                height="48" viewBox="0 0 48 48" style=" fill:#000000;">
+                                <linearGradient id="_osn9zIN2f6RhTsY8WhY4a_5MQ0gPAYYx7a_gr1" x1="10.341"
+                                    x2="40.798" y1="8.312" y2="38.769" gradientUnits="userSpaceOnUse">
                                     <stop offset="0" stop-color="#2aa4f4"></stop>
                                     <stop offset="1" stop-color="#007ad9"></stop>
                                 </linearGradient>
@@ -323,8 +323,8 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                         </a>
                         <!-- Pinterest Link -->
                         <a href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48"
-                                viewBox="0 0 48 48" style=" fill:#000000;">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48"
+                                height="48" viewBox="0 0 48 48" style=" fill:#000000;">
                                 <circle cx="24" cy="24" r="20" fill="#E60023"></circle>
                                 <path fill="#FFF"
                                     d="M24.4439087,11.4161377c-8.6323242,0-13.2153931,5.7946167-13.2153931,12.1030884	c0,2.9338379,1.5615234,6.5853882,4.0599976,7.7484131c0.378418,0.1762085,0.581543,0.1000366,0.668457-0.2669067	c0.0668945-0.2784424,0.4038086-1.6369019,0.5553589-2.2684326c0.0484619-0.2015381,0.0246582-0.3746338-0.1384277-0.5731201	c-0.8269653-1.0030518-1.4884644-2.8461304-1.4884644-4.5645752c0-4.4115601,3.3399658-8.6799927,9.0299683-8.6799927	c4.9130859,0,8.3530884,3.3484497,8.3530884,8.1369019c0,5.4099731-2.7322998,9.1584473-6.2869263,9.1584473	c-1.9630737,0-3.4330444-1.6238403-2.9615479-3.6153564c0.5654297-2.3769531,1.6569214-4.9415283,1.6569214-6.6584473	c0-1.5354004-0.8230591-2.8169556-2.5299683-2.8169556c-2.006958,0-3.6184692,2.0753784-3.6184692,4.8569336	c0,1.7700195,0.5984497,2.9684448,0.5984497,2.9684448s-1.9822998,8.3815308-2.3453979,9.9415283	c-0.4019775,1.72229-0.2453003,4.1416016-0.0713501,5.7233887l0,0c0.4511108,0.1768799,0.9024048,0.3537598,1.3687744,0.4981079l0,0	c0.8168945-1.3278198,2.0349731-3.5056763,2.4864502-5.2422485c0.2438354-0.9361572,1.2468872-4.7546387,1.2468872-4.7546387	c0.6515503,1.2438965,2.5561523,2.296936,4.5831299,2.296936c6.0314941,0,10.378418-5.546936,10.378418-12.4400024	C36.7738647,16.3591919,31.3823242,11.4161377,24.4439087,11.4161377z">
@@ -347,12 +347,12 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                                         <stop offset=".5" stop-color="#ff543e" />
                                         <stop offset="1" stop-color="#c837ab" />
                                     </linearGradient>
-                                    <radialGradient id="c" cx="158.429" cy="578.088" r="65" xlink:href="#a"
-                                        gradientUnits="userSpaceOnUse"
-                                        gradientTransform="matrix(0 -1.98198 1.8439 0 -1031.402 454.004)" fx="158.429"
-                                        fy="578.088" />
-                                    <radialGradient id="d" cx="147.694" cy="473.455" r="65" xlink:href="#b"
-                                        gradientUnits="userSpaceOnUse"
+                                    <radialGradient id="c" cx="158.429" cy="578.088" r="65"
+                                        xlink:href="#a" gradientUnits="userSpaceOnUse"
+                                        gradientTransform="matrix(0 -1.98198 1.8439 0 -1031.402 454.004)"
+                                        fx="158.429" fy="578.088" />
+                                    <radialGradient id="d" cx="147.694" cy="473.455" r="65"
+                                        xlink:href="#b" gradientUnits="userSpaceOnUse"
                                         gradientTransform="matrix(.17394 .86872 -3.5818 .71718 1648.348 -458.493)"
                                         fx="147.694" fy="473.455" />
                                 </defs>
@@ -376,8 +376,10 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                             data-ga-action="impressum">Impressum</a>
                         <a href="#" class="hover:text-orange-500" data-ga-category="menu"
                             data-ga-action="about">Info</a>
-                        <a href="#" class="hover:text-orange-500" data-ga-category="menu" data-ga-action="jobs">Jobs</a>
-                        <a href="#" class="hover:text-orange-500" data-ga-category="menu" data-ga-action="press">For
+                        <a href="#" class="hover:text-orange-500" data-ga-category="menu"
+                            data-ga-action="jobs">Jobs</a>
+                        <a href="#" class="hover:text-orange-500" data-ga-category="menu"
+                            data-ga-action="press">For
                             the Record</a>
                     </div>
                     <div class="flex flex-col md:space-y-4 space-y-1">
@@ -395,7 +397,8 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                             data-ga-action="help">Support</a>
                         <a href="#" class="hover:text-orange-500" data-ga-category="menu"
                             data-ga-action="play">Webplayer</a>
-                        <a href="#" class="hover:text-orange-500" data-ga-category="menu" data-ga-action="free">Mobile
+                        <a href="#" class="hover:text-orange-500" data-ga-category="menu"
+                            data-ga-action="free">Mobile
                             App</a>
                     </div>
                 </div>
@@ -513,8 +516,8 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
         </footer>
 
         <a href="/articles/create" dir="rtl"
-            class="fixed bottom-10 right-10 btn btn-error bg-gradient-to-br from-brightRedLight to-brightRed font-bold py-2 px-5">مقالة
-            جديدة
+            class="fixed bottom-10 right-10 btn btn-error bg-gradient-to-br from-brightRedLight to-brightRed font-bold py-2 px-5">New
+            Article
         </a>
     </div>
 

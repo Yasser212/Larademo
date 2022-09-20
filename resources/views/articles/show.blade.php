@@ -41,44 +41,44 @@
 
 
 <x-layout>
-    <div dir="rtl" class="dark:text-slate-100 text-slate-800 flex w-4/5 justify-start mt-6">
+    <div class="dark:text-slate-100 text-slate-800 flex w-4/5 justify-start mt-6">
         <div class="flex flex-col space-y-6 w-1/2 p-10">
             <div class="flex justify-start font-bold text-lg font-mono">
-                <p> أدب</p>
+                <p>Sports</p>
                 <span class="mx-2"> | </span>
-                <p> عالمي</p>
+                <p>World</p>
             </div>
-            <div dir="ltr">
-                <x-article-tags :tagsCsv="$article->tags" />
-            </div>
-            <div class="flex md:flex-col md:flex-nowrap">
+            {{-- <div dir="ltr"> --}}
+            <x-article-tags :tagsCsv="$article->tags" />
+        </div>
+        <div class="flex md:flex-col md:flex-nowrap">
 
-                <a href="#" class="text-xl md:text-3xl font-extrabold mb-3">{{ $article['title'] }}</a>
+            <a href="#" class="text-xl md:text-3xl font-extrabold mb-3">{{ $article['title'] }}</a>
 
-                <a href="/resources/views/Posts"><img class="py-5 lg:w-fit" src="/posts_img/img(1).jpg" alt=""></a>
-
-
-                <div class="flex flex-col">
-                    <p>{{ $article['title'] }}</p>
-                    <br>
-                    <hr class="border-black dark:border-white">
-                    <br>
-                    <p dir="rtl" class="text-sm line-clamp-3 font-semibold font-sans">{{ $article['content'] }}
-                    </p>
+            <a href="/resources/views/Posts"><img class="py-5 lg:w-fit" src="/posts_img/img(1).jpg" alt=""></a>
 
 
+            <div class="flex flex-col">
+                <p>{{ $article['title'] }}</p>
+                <br>
+                <hr class="border-black dark:border-white">
+                <br>
+                <p dir="rtl" class="text-sm line-clamp-3 font-semibold font-sans">{{ $article['content'] }}
+                </p>
 
-                    <br>
-                    <div class="flex w-1/2 space-x-3">
-                        <a href="">
-                            <p class="text-nowrap font-semibold text-sm">{{ $article['author'] }}</p>
-                        </a>
 
-                    </div>
 
+                <br>
+                <div class="flex w-1/2 space-x-3">
+                    <a href="">
+                        <p class="text-nowrap font-semibold text-sm">{{ $article['author'] }}</p>
+                    </a>
 
                 </div>
+
+
             </div>
         </div>
+    </div>
     </div>
 </x-layout>
