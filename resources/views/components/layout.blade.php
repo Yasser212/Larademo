@@ -34,11 +34,11 @@
 
 <body x-cloak :class="{ 'dark': darkMode === true }" x-data="{ 'darkMode': false }" x-init="darkMode = JSON.parse(localStorage.getItem('darkMode'));
 $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))">
-    <div class="bg-body_bright dark:bg-slate-600  w-full h-full">
+    <div class="bg-slate-400 dark:bg-slate-600  w-full h-full">
 
         <!-- Header -->
         <header
-            class="sticky top-0 z-50 flex items-center shadow-md shadow-veryDarkBlue justify-center w-full h-fit text-slate-300 bg-darkBlue dark:bg-black dark:text-white md:bg-opacity-95">
+            class="sticky top-0 z-50 flex items-center shadow-md shadow-veryDarkBlue justify-center w-full h-fit text-slate-300 bg-darkBlue dark:bg-black dark:text-white">
             <div x-on:click.away="open = false" x-data="{ open: false }" class="flex flex-col w-full bg-transparent">
                 <div x-on:click.away="close = false" x-data="{ close: false }"
                     class="relative flex flex-col md:flex-row mx-auto items-center lg:w-9/12 w-full xs:px-4 bg-transparent">
