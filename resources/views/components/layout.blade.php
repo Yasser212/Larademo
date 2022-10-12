@@ -396,7 +396,7 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                         <a href="#" class="hover:text-orange-500" data-ga-category="menu"
                             data-ga-action="help">Support</a>
                         <a href="#" class="hover:text-orange-500" data-ga-category="menu"
-                            data-ga-action="play">Webplayer</a>
+                            data-ga-action="play">Connections</a>
                         <a href="#" class="hover:text-orange-500" data-ga-category="menu"
                             data-ga-action="free">Mobile
                             App</a>
